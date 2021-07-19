@@ -1,10 +1,9 @@
 import { makeStyles } from "@material-ui/core";
-import background from "../../assets/background.jpeg";
 
 export default makeStyles((theme) => ({
   root: {
     minHeight: "100vh",
-    backgroundImage: `url(${background})`,
+    background: "#000",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
   },
@@ -14,6 +13,7 @@ export default makeStyles((theme) => ({
   wrapper: {
     width: "100%",
     margin: "0 auto",
+    justifyContent: "flex-end",
   },
   grow: {
     flexGrow: 1,
@@ -21,14 +21,38 @@ export default makeStyles((theme) => ({
   logo: {
     flexGrow: 1,
     alignItems: "center",
-    display: "flex",
-  },
-  image: {
-    marginTop: "10px",
-    marginRight: "50px",
   },
   icon: {
-    color: "#fff",
+    color: "rgb(175, 128, 25)",
     fontSize: "2rem",
+  },
+  container: {
+    width: "100%",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    paddingTop: "18rem",
+  },
+  title: {
+    color: "rgb(176, 125, 35)",
+    fontFamily: "Rye, cursive",
+    fontSize: "5rem",
+    textAlign: "center",
+    position: "absolute",
+    zIndex: 1,
+    paddingBottom: "4rem",
+  },
+  subTitle: {
+    color: "rgb(176, 125, 35)",
+    fontFamily: "Old Standard TT, serif",
+    fontSize: "2rem",
+    position: "absolute",
+    paddingTop: "4rem",
+    zIndex: 1,
+  },
+  image: {
+    position: "absolute",
+    zIndex: "0",
+    marginTop: "11.5rem",
   },
 }));
