@@ -41,6 +41,17 @@ export default makeStyles((theme) => ({
     position: "absolute",
     zIndex: 1,
     paddingBottom: "4rem",
+    animation: "$fadeIn 3.5s ease-in-out",
+  },
+  "@keyframes fadeIn": {
+    "0%": {
+      opacity: 0,
+      transform: "translateY(-200)",
+    },
+    "100%": {
+      opacity: 1,
+      transform: "translateY(0)",
+    },
   },
   subTitle: {
     color: "rgb(176, 125, 35)",
@@ -49,10 +60,28 @@ export default makeStyles((theme) => ({
     position: "absolute",
     paddingTop: "4rem",
     zIndex: 1,
+    animation: "$slowFade 6s ease-in-out",
+  },
+  "@keyframes slowFade": {
+    "0%": {
+      opacity: 0,
+      transform: "translateY(-200)",
+    },
+    "100%": {
+      opacity: 1,
+      transform: "translateY(0)",
+    },
   },
   image: {
     position: "absolute",
-    zIndex: "0",
-    marginTop: "11.5rem",
+    zIndex: 0,
+    marginTop: "10rem",
+  },
+  downArrow: {
+    color: "rgb(176, 125, 35)",
+    fontSize: "3.5rem",
+    position: "absolute",
+    zIndex: 1,
+    marginTop: "45rem",
   },
 }));
