@@ -6,6 +6,12 @@ export default makeStyles((theme) => ({
     background: "#000",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
+    colors: {
+      textPrimary: "#b6b6b6",
+      textSecondary: "#ececec",
+      bgPrimary: "#23232e",
+      bgSecondary: "#141418",
+    },
   },
   appBar: {
     background: "none",
@@ -22,9 +28,19 @@ export default makeStyles((theme) => ({
     flexGrow: 1,
     alignItems: "center",
   },
-  icon: {
+  menuIcon: {
     color: "rgb(175, 128, 25)",
-    fontSize: "2rem",
+    fontSize: "3rem",
+    animation: "$bounceLeft 1s ease-in-out",
+    animationIterationCount: "infinite",
+  },
+  "@keyframes bounceLeft": {
+    "0%": {
+      transform: "translateX(0)",
+    },
+    "50%": {
+      transform: "translateX(-8px)",
+    },
   },
   container: {
     width: "100%",
@@ -83,5 +99,15 @@ export default makeStyles((theme) => ({
     position: "absolute",
     zIndex: 1,
     marginTop: "45rem",
+    animation: "$bounce 1s ease-in-out",
+    animationIterationCount: "infinite",
+  },
+  "@keyframes bounce": {
+    "0%": {
+      transform: "translateY(0)",
+    },
+    "50%": {
+      transform: "translateY(-8px)",
+    },
   },
 }));

@@ -1,18 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { AppBar, Toolbar, Typography, IconButton, CssBaseline } from '@material-ui/core';
-import MenuRoundedIcon from '@material-ui/icons/MenuRounded'
+import ArrowLeftRoundedIcon from '@material-ui/icons/ArrowLeftRounded';
 import KeyboardArrowDownRoundedIcon from '@material-ui/icons/KeyboardArrowDownRounded';
 import useStyles from './styles'
 import logo from '../../assets/logo2.jpeg'
 
-const Navbar = () => {
+const Header = () => {
     const classes = useStyles()
     
-    const [checked, setChecked] = useState(false)
 
-    useEffect(() => {
-        setChecked(true)
-    },[])
+    
 
     return (
         <div className={classes.root}>
@@ -21,7 +18,7 @@ const Navbar = () => {
                 <Toolbar className={classes.wrapper}>
                     <div>
                         <IconButton>
-                            <MenuRoundedIcon className={classes.icon} />
+                            <ArrowLeftRoundedIcon className={classes.menuIcon} />
                         </IconButton>
                     </div>
                 </Toolbar>
@@ -44,4 +41,4 @@ const Navbar = () => {
     );
 }
 
-export default Navbar;
+export default Header;
