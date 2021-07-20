@@ -7,9 +7,6 @@ import logo from '../../assets/logo2.jpeg'
 
 const Header = () => {
     const classes = useStyles()
-    
-
-    
 
     return (
         <div className={classes.root}>

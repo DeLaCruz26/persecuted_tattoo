@@ -1,10 +1,12 @@
 import React from "react";
-import { Header } from "./components";
+import { Artists, Header } from "./components";
+import "./App.css";
 
 export default function App() {
   return (
-    <div>
+    <div className="body">
       <Header />
+      <Artists />
     </div>
   );
 }

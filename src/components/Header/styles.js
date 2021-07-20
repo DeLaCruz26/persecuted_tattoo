@@ -29,7 +29,7 @@ export default makeStyles((theme) => ({
     alignItems: "center",
   },
   menuIcon: {
-    color: "rgb(175, 128, 25)",
+    color: "rgb(144, 101, 42)",
     fontSize: "3rem",
     animation: "$bounceLeft 1s ease-in-out",
     animationIterationCount: "infinite",
@@ -50,7 +50,7 @@ export default makeStyles((theme) => ({
     paddingTop: "18rem",
   },
   title: {
-    color: "rgb(176, 125, 35)",
+    color: "rgb(144, 101, 42)",
     fontFamily: "Rye, cursive",
     fontSize: "5rem",
     textAlign: "center",
@@ -70,7 +70,7 @@ export default makeStyles((theme) => ({
     },
   },
   subTitle: {
-    color: "rgb(176, 125, 35)",
+    color: "rgb(144, 101, 42)",
     fontFamily: "Old Standard TT, serif",
     fontSize: "2rem",
     position: "absolute",
@@ -94,7 +94,7 @@ export default makeStyles((theme) => ({
     marginTop: "10rem",
   },
   downArrow: {
-    color: "rgb(176, 125, 35)",
+    color: "rgb(144, 101, 42)",
     fontSize: "3.5rem",
     position: "absolute",
     zIndex: 1,
