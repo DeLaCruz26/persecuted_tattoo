@@ -1,24 +1,40 @@
 import React from 'react';
-import { Typography, CardActionArea, Card, CardContent, CardMedia } from '@material-ui/core';
-import { useFourThreeCardMediaStyles } from '@mui-treasury/styles/cardMedia/fourThree'
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 import useStyles from './styles'
+import { Grow } from '@material-ui/core';
 
-const ArtistCard = ({ artist }) => {
-    const classes = useStyles()
-    const mediaStyles = useFourThreeCardMediaStyles()
-    return (
-        <CardActionArea className={classes.actionArea}>
+const ArtistCard = ({ artist, position }) => {
+  const classes = useStyles();
+
+  return (
+        <Grow in={position}>
             <Card className={classes.card}>
-                <CardMedia className={mediaStyles} image={artist.image} />
-                <CardContent className={classes.content}>
-                    <Typography className={classes.name}>
-                        {artist.name}
-                    </Typography>
-                    <Typography className={classes.description}>See More</Typography>
+            <CardActionArea>
+                <CardMedia
+                className={classes.media}
+                image={artist.image}
+                title="Artist Image"
+                />
+                <CardContent>
+                <Typography gutterBottom variant="h5" component="h2" className={classes.artsistName}>
+                    {artist.name}
+                </Typography>
                 </CardContent>
+            </CardActionArea>
+            <CardActions>
+                <Button size="small" className={classes.button}>
+                Learn More
+                </Button>
+            </CardActions>
             </Card>
-        </CardActionArea>
-    );
+        </Grow>
+  );
 }
 
-export default ArtistCard;
+export default ArtistCard

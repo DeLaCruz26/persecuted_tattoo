@@ -1,58 +1,29 @@
 import { makeStyles } from "@material-ui/core";
-import Color from "color";
 
-const useGridStyles = makeStyles(({ breakpoints }) => ({
+export default makeStyles((theme) => ({
   root: {
-    [breakpoints.up("md")]: {
-      justifyContent: "center",
-    },
+    minHeight: "100vh",
     background: "#000",
   },
-}));
-
-export default useGridStyles;
-
-export const useStyles = makeStyles(() => ({
   container: {
-    height: "100vh",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    paddingTop: "10rem",
+  },
+  card: {
+    width: 345,
     background: "#000",
+    margin: "15px",
   },
-  actionArea: {
-    borderRadius: 8,
-    transition: "0.2s",
-    "&:hover": {
-      transform: "scale(1.1)",
-    },
+  media: {
+    height: 345,
   },
-  card: ({ color }) => ({
-    minWidth: 56,
-    borderRadius: 16,
-    boxShadow: "none",
-    "&:hover": {
-      boxShadow: `0 6px 12px 0 ${Color(color)
-        .rotate(-12)
-        .darken(0.2)
-        .fade(0.5)}`,
-    },
-  }),
-  content: ({ color }) => {
-    return {
-      backgroundColor: color,
-      padding: "1rem 1.5rem 1.5rem",
-    };
-  },
-  name: {
-    fontFamily: "",
-    fontSize: "2rem",
+  artsistName: {
     color: "#fff",
-    textTransform: "uppercase",
+    fontFamily: "Rye, cursive",
   },
-  description: {
-    fontFamily: "",
-    color: "#fff",
-    opacity: 0.87,
-    marginTop: "2rem",
-    fontWeight: 500,
-    fontSize: 14,
+  button: {
+    color: "rgb(144, 101, 42)",
   },
 }));

@@ -57,7 +57,7 @@ export default makeStyles((theme) => ({
     position: "absolute",
     zIndex: 1,
     paddingBottom: "4rem",
-    animation: "$fadeIn 3.5s ease-in-out",
+    animation: "$fadeIn 2.5s ease-in-out",
   },
   "@keyframes fadeIn": {
     "0%": {
@@ -76,7 +76,7 @@ export default makeStyles((theme) => ({
     position: "absolute",
     paddingTop: "4rem",
     zIndex: 1,
-    animation: "$slowFade 6s ease-in-out",
+    animation: "$slowFade 3s ease-in-out",
   },
   "@keyframes slowFade": {
     "0%": {
