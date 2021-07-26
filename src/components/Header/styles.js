@@ -91,7 +91,7 @@ export default makeStyles((theme) => ({
   image: {
     position: "absolute",
     zIndex: 0,
-    marginTop: "10rem",
+    marginTop: "11rem",
   },
   downArrow: {
     color: "rgb(144, 101, 42)",
