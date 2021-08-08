@@ -1,16 +1,16 @@
-import React from 'react';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+import React, { useState } from 'react';
+import { Card, CardActionArea, CardActions, CardContent, CardMedia, Button, Typography } from '@material-ui/core/';
 import useStyles from './styles'
 import { Grow } from '@material-ui/core';
+import ArtistModal from './ArtistModal';
 
 const ArtistCard = ({ artist, position }) => {
   const classes = useStyles();
+  const [modal, setModal] = useState(false)
+
+  const handleOpenModal = () => {
+      setModal(true)
+  }
 
   return (
         <Grow in={position}>
@@ -20,18 +20,32 @@ const ArtistCard = ({ artist, position }) => {
                 className={classes.media}
                 image={artist.image}
                 title="Artist Image"
+                onClick={() => handleOpenModal(artist.id)}
                 />
                 <CardContent>
-                <Typography gutterBottom variant="h5" component="h2" className={classes.artsistName}>
+                <Typography gutterBottom variant="h5" component="h2" className={classes.artsistName} onClick={() => handleOpenModal(artist.id)}>
                     {artist.name}
                 </Typography>
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <Button size="small" className={classes.button}>
-                Learn More
+                <Button size="small" className={classes.button} onClick={() => handleOpenModal(artist.id)}>
+                See More
                 </Button>
             </CardActions>
+            <ArtistModal trigger={modal} setTrigger={setModal}>
+                <div className={classes.modalArtistName}>
+                    <div>
+                        {artist.name}
+                    </div>
+                    <div>
+                        <p className={classes.modalArtistDesc}>{artist.description}</p>
+                    </div>
+                    <div className={classes.modalArtistImage}>
+                        <img src={artist.image} width='600px' height='600px' />
+                    </div>
+                </div>
+            </ArtistModal>
             </Card>
         </Grow>
   );
